@@ -2,7 +2,6 @@
 
 namespace Displore\Tags;
 
-use Displore\Tags\Tag;
 use DB;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,9 +10,10 @@ class Tagger
     /**
      * Add a tag to a taggable model.
      * 
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     * @param  string|int                          $tag
-     * @param  string|null                         $category
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param string|int                          $tag
+     * @param string|null                         $category
+     *
      * @return bool
      */
     public function tag(Model $model, $tag, $category = null)
@@ -32,8 +32,9 @@ class Tagger
     /**
      * Add a tag by its id.
      * 
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     * @param  int                                 $id
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param int                                 $id
+     *
      * @return bool
      */
     public function tagWithId(Model $model, $id)
@@ -44,9 +45,10 @@ class Tagger
     /**
      * Add a tag by its name.
      * 
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     * @param  string                              $name
-     * @param  string|null                         $category
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param string                              $name
+     * @param string|null                         $category
+     *
      * @return bool
      */
     public function tagWithName(Model $model, $name, $category = null)
@@ -59,10 +61,11 @@ class Tagger
     /**
      * Add a tag, or create the tag if it doesn't exist.
      * 
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     * @param  string                              $name
-     * @param  string|null                         $category
-     * @param  string|null                         $description
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param string                              $name
+     * @param string|null                         $category
+     * @param string|null                         $description
+     *
      * @return bool
      */
     public function tagOrCreate(Model $model, $name, $category = null, $description = null)
@@ -82,9 +85,10 @@ class Tagger
     /**
      * Remove a tag from a model.
      * 
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     * @param  string|int                          $tagToRemove
-     * @param  string|null                         $category
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param string|int                          $tagToRemove
+     * @param string|null                         $category
+     *
      * @return bool
      */
     public function untag(Model $model, $tagToRemove, $category = null)
@@ -103,8 +107,9 @@ class Tagger
     /**
      * Untag by its id.
      * 
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     * @param  int                                 $id
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param int                                 $id
+     *
      * @return bool
      */
     public function untagWithId(Model $model, $id)
@@ -115,9 +120,10 @@ class Tagger
     /**
      * Untag by its name.
      * 
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     * @param  string                              $name
-     * @param  string|null                         $category
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param string                              $name
+     * @param string|null                         $category
+     *
      * @return bool
      */
     public function untagWithName(Model $model, $name, $category = null)
@@ -130,8 +136,9 @@ class Tagger
     /**
      * Sync tags on a model.
      * 
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     * @param  array                               $tagsToSync
+     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param array                               $tagsToSync
+     *
      * @return bool
      */
     public function syncTags(Model $model, array $tagsToSync)
@@ -144,9 +151,10 @@ class Tagger
     /**
      * Create a new tag.
      * 
-     * @param  string      $name
-     * @param  string|null $category
-     * @param  string|null $description
+     * @param string      $name
+     * @param string|null $category
+     * @param string|null $description
+     *
      * @return $this
      */
     public function create($name, $category = null, $description = null)
@@ -163,8 +171,9 @@ class Tagger
     /**
      * Delete a tag.
      * 
-     * @param  string|int  $tag
-     * @param  string|null $category
+     * @param string|int  $tag
+     * @param string|null $category
+     *
      * @return bool
      */
     public function delete($tag, $category = null)
@@ -185,9 +194,11 @@ class Tagger
     /**
      * Get all models with the given tag.
      * 
-     * @param  string|int                                          $tag
-     * @param  string|null                                         $category
+     * @param string|int  $tag
+     * @param string|null $category
+     *
      * @throws Illuminate\Database\Eloquent\ModelNotFoundException
+     *
      * @return \Illuminate\Database\Eloquent\Collection
      */
     public function getWithTag($tag, $category = null)
@@ -222,7 +233,8 @@ class Tagger
     /**
      * Detach the given tag from all its models.
      * 
-     * @param  \Displore\Core\Models\Tag $tag
+     * @param \Displore\Core\Models\Tag $tag
+     *
      * @return bool
      */
     public function detachForTag(Tag $tag)

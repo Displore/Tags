@@ -8,8 +8,6 @@ class TagsServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
-     *
-     * @return void
      */
     public function boot()
     {
@@ -21,13 +19,11 @@ class TagsServiceProvider extends ServiceProvider
 
     /**
      * Register any package services.
-     *
-     * @return void
      */
     public function register()
     {
         $this->app->singleton('tagger', function () {
-            return new Tagger;
+            return new Tagger();
         });
     }
 }

@@ -20,8 +20,9 @@ class Tag extends Eloquent
     /**
      * Eloquent Scope for tag categories.
      * 
-     * @param  \Illuminate\Database\Query\Builder $query
-     * @param  string                             $category
+     * @param \Illuminate\Database\Query\Builder $query
+     * @param string                             $category
+     *
      * @return \Illuminate\Database\Query\Builder
      */
     public function scopeCategory($query, $category)

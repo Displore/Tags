@@ -3,7 +3,6 @@
 include 'model/Task.php';
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-
 use Displore\Tags\Tag;
 use Test\Model\Task;
 

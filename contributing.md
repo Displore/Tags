@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-Contributions are accepted via Pull Requests on [Github](https://github.com/Displore/Menus).
+Contributions are accepted via Pull Requests on [Github](https://github.com/Displore/Tags).
 
 
 ## Pull Requests
@@ -27,7 +27,7 @@ Contributions are accepted via Pull Requests on [Github](https://github.com/Disp
 In a Laravel application, with [Laravel Packager](https://github.com/Jeroen-G/laravel-packager):
 ``` bash
 $ php artisan packager:git *Displore Github url*
-$ php artisan packager:tests Displore Menus
+$ php artisan packager:tests Displore Tags
 $ phpunit
 ```
 

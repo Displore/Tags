@@ -2,15 +2,14 @@
 
 namespace Displore\Tags;
 
-use Displore\Tags\Tag;
-
 trait Taggable
 {
     /**
      * Add a tag.
      * 
-     * @param  string      $name
-     * @param  string|null $category
+     * @param string      $name
+     * @param string|null $category
+     *
      * @return bool
      */
     public function tag($name, $category = null)
@@ -23,8 +22,9 @@ trait Taggable
     /**
      * Remove a tag.
      * 
-     * @param  string      $tagToRemove
-     * @param  string|null $category
+     * @param string      $tagToRemove
+     * @param string|null $category
+     *
      * @return bool
      */
     public function untag($name, $category = null)
@@ -37,7 +37,8 @@ trait Taggable
     /**
      * Sync tags.
      * 
-     * @param  array $tagsToSync
+     * @param array $tagsToSync
+     *
      * @return bool
      */
     public function syncTags(array $tagsToSync)
