@@ -1,0 +1,9 @@
+{
+    "name": "Tags",
+    "requirement": "displore/tags",
+    "provides": {
+        "serviceprovider": "Displore\\Tags\\TagsServiceProvider",
+        "facade": "Tagger",
+        "facade-namespace": "Displore\\Tags\\Facades\\Tagger"
+    }
+}
